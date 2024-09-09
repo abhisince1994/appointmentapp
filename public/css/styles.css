@@ -1,0 +1,78 @@
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* //basic css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* //style container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0,0,0,0.1);
+}
+
+/* //form style */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* //style the list of appointments */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px;
+    border-radius: 1px solid #ddd;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li form {
+    display: inline;
+}
+
+/* //button style within the list */
+ul li button {
+    margin-left: 10px;
+}

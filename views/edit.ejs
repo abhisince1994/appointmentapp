@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Appointment</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Appointment</h1>
+    <form action="/edit-appointment" method="POST">
+        <input type="hidden" name="id" value="<%= appointment.id %>">
+        <label for="username">Username</label>
+        <input type="text" name="username" value="<%= appointment.username %>" required />
+        <label for="email">Email</label>
+        <input type="email" name="email" value="<%= appointment.email %>" required />
+        <label for="phone">Phone No</label>
+        <input type="tel" name="phone" value="<%= appointment.phone %>" required />
+        <button type="submit">Save Changes</button>
+    </form>
+    </div>
+</body>
+</html>

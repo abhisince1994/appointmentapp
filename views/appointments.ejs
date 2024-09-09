@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BOOKING APPOINTMENT APP</h1>
+    <form action="/add-appointment" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" required />
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+        <label for="phone">Phone No</label>
+        <input type="tel" name="phone" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <ul>
+        <% for(let appointment of appointments) { %>
+        <li>
+            <%= appointment.username %> - <%= appointment.email %> - <%= appointment.phone %>
+            <form action="/edit-appointment" method="GET" style="display:inline;">
+                <input type="hidden" name="appointmentId" value="<%= appointment.id %>">
+                <button type="submit">Edit</button>
+            </form>
+            <form action="/delete-appointment" method="POST" style="display: inline;">
+                <input type="hidden" name="appointmentId" value="<%= appointment.id %>">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    <% } %>
+    </ul>
+    </div>
+</body>
+</html>
