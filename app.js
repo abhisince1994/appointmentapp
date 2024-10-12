@@ -15,6 +15,11 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Redirect from base URL '/' to '/appointments'
+app.get('/', (req, res) => {
+    res.redirect('/appointments'); // This line handles the redirect
+  });
+
 //routes
 app.use(appointmentRoutes);
 
